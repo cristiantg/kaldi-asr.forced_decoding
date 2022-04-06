@@ -1,4 +1,4 @@
-export KALDI_ROOT=`pwd`/../../..
+export KALDI_ROOT=/vol/tensusers4/ctejedor/lanewcristianmachine/opt/kaldi
 [ -f $KALDI_ROOT/tools/env.sh ] && . $KALDI_ROOT/tools/env.sh
 
 
