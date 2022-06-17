@@ -1,7 +1,7 @@
 #!/bin/bash
-if [[ $# -ne 7 ]]; then
-    echo "Please set 7 parameters: audio file; prompt string; aux-folder;  output folder; HCLG folder; mdl folder; conf folder"
-    echo "./run_nl.sh audios/fn000049_1_001.wav "`cat prompts/fn000049_1_001.prompt`" sox results exp/tdnn1a_sp_bi_online/graph_s exp/tdnn1a_sp_bi_online exp/tdnn1a_sp_bi_online/conf"
+if [[ $# -ne 8 ]]; then
+    echo "Please set 8 parameters: audio file; prompt string; aux-folder;  output folder; HCLG folder; mdl folder; conf folder; beam"
+    echo "./run_nl.sh audios/fn000049_1_001.wav "`cat prompts/fn000049_1_001.prompt`" sox results exp/tdnn1a_sp_bi_online/graph_s exp/tdnn1a_sp_bi_online exp/tdnn1a_sp_bi_online/conf 20"
     exit 2
 fi
 
@@ -41,7 +41,7 @@ online2-wav-nnet3-latgen-faster-force \
     --config=$config \
     --min-active=200 \
     --max-active=7000 \
-    --beam=20 \
+    --beam="$8" \
     --lattice-beam=7.0 \
     --acoustic-scale=1.0 \
     --word-symbol-table=$words \

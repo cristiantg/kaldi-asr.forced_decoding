@@ -1,0 +1,11 @@
+audios
+other_audios
+wav_files*
+_*
+wav.scp
+sox/
+nohup.out
+*_fd/
+*_ao/
+*-pr/
+*-mt/

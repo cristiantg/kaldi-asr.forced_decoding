@@ -19,12 +19,12 @@
       --do-endpointing=true \
       --frames-per-chunk=20 \
       --extra-left-context-initial=0 \
-      --online=true \
+      --online=false \
       --frame-subsampling-factor=3 \
       --config=$config \
       --min-active=200 \
       --max-active=6000 \
-      --beam=12 \
+      --beam=16 \
       --lattice-beam=6.0 \
       --acoustic-scale=1.0 \
       --word-symbol-table=$words \
